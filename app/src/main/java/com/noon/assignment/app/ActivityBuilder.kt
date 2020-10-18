@@ -21,4 +21,6 @@ abstract class ActivityBuilder {
     @MovieDetailsScope
     @ContributesAndroidInjector(modules = [MovieDetailsModule::class])
     abstract fun bindMovieDetailsActivity(): MovieDetailsActivity
+
+    
 }
