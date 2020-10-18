@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity(), MoviesAdapter.OnMovieClicked, MainView
         mRecyclerView = findViewById(R.id.recycler_view)
         emptyTextView = findViewById(R.id.empty)
         errorTextView = findViewById(R.id.error)
+        
+        println()
         indeterminateBar = findViewById(R.id.indeterminateBar)
         mMoviesAdapter = MoviesAdapter(this, this)
         mRecyclerView.layoutManager = LinearLayoutManager(this)
