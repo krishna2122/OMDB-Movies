@@ -113,6 +113,7 @@ class MainActivity : AppCompatActivity(), MoviesAdapter.OnMovieClicked, MainView
         val searchView: SearchView? = searchItem?.actionView as SearchView
 
         println("this was great expereince ")
+
         searchView?.setSearchableInfo(searchManager.getSearchableInfo(componentName))
         return super.onCreateOptionsMenu(menu)
     }
