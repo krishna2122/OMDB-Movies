@@ -44,23 +44,17 @@ class MainActivity : AppCompatActivity(), MoviesAdapter.OnMovieClicked, MainView
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         mRecyclerView = findViewById(R.id.recycler_view)
         emptyTextView = findViewById(R.id.empty)
         errorTextView = findViewById(R.id.error)
         indeterminateBar = findViewById(R.id.indeterminateBar)
-
         mMoviesAdapter = MoviesAdapter(this, this)
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         mRecyclerView.adapter = mMoviesAdapter
-
         var itemDevide: DividerItemDecoration =DividerItemDecoration(this,HORIZONTAL)
-
         val horizontalDevider = ContextCompat.getDrawable(this, R.drawable.horizontal_seperator)
         itemDevide.setDrawable(horizontalDevider!!)
-
         mRecyclerView.addItemDecoration( itemDevide);
-
         presenter.onCreate()
     }
 
